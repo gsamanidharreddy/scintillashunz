@@ -1,0 +1,125 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.navb{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.navb .body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dad3f8;
+}
+.navb ::selection{
+  background: #6d50e2;
+  color: #fff;
+}
+.navb .container{
+  max-width: 450px;
+  width: 100%;
+  padding: 40px 50px  40px  40px;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.navb .container .topic{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.navb .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navb .content .list{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-right: 50px;
+  position: relative;
+}
+.navb .content .list label{
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: #333;
+  z-index: 12;
+}
+.navb #home:checked ~ .list label.home,
+ #blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about{
+  color: #fff;
+}
+.navb .content .list label:hover{
+  color: #6d50e2;
+}
+.navb .content .slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  background: #6d50e2;
+  transition: all 0.4s ease;
+}
+.navb #home:checked ~ .list .slider{
+  top: 0;
+}
+.navb #blog:checked ~ .list .slider{
+  top: 60px;
+}
+.navb #help:checked ~ .list .slider{
+  top: 120px;
+}
+.navb #code:checked ~ .list .slider{
+  top: 180px;
+}
+.navb #about:checked ~ .list .slider{
+  top: 240px;
+}
+.navb .content .text-content{
+  width: 80%;
+  height: 100%;
+}
+.navb .content .text{
+  display: none;
+}
+.navb .content .text .title{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.navb .content .text p{
+  text-align: justify;
+}
+.navb .content .text-content .home{
+  display: block;
+}
+.navb #home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+ #help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about{
+  display: block;
+}
+.navb #blog:checked ~ .text-content .home,
+.navb #help:checked ~ .text-content .home,
+.navb #code:checked ~ .text-content .home,
+.navb #about:checked ~ .text-content .home{
+  display: none;
+}
+.navb .content input{
+  display: none;
+}
